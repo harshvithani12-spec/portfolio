@@ -50,3 +50,316 @@ footer{text-align:center;color:var(--muted);padding:30px 5% 50px}.reveal{opacity
 @media(max-width:920px){.hero,.about-grid,.project-grid,.service-grid,.timeline,.contact-panel,.contact-info{grid-template-columns:1fr}.hero{padding-top:140px}.contact-actions{justify-content:flex-start}.nav-links{position:absolute;top:78px;left:5%;right:5%;display:none;flex-direction:column;padding:16px;background:rgba(7,11,24,.92);border:1px solid var(--line);border-radius:24px}.nav-links.open{display:flex}.menu-toggle{display:block}h1{letter-spacing:-2px}.stats-strip{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:560px){.section{padding:86px 5%}.hero{padding-top:125px}.stats-strip{grid-template-columns:1fr}.profile-card{padding:18px}.contact-panel{padding:24px}.project-visual{height:170px}.cta-row .btn{width:100%}}
 .section-subtitle{color:var(--muted);line-height:1.7;margin-top:14px;font-size:1.08rem}.featured-project{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;padding:24px;margin-bottom:30px;align-items:center}.featured-project img{width:100%;height:360px;object-fit:cover;border-radius:22px;border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,.35)}.featured-copy h3,.android-content h3{font-size:1.8rem;margin-bottom:12px}.featured-copy p,.android-content p{color:var(--muted);line-height:1.75}.screenshot-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.screenshot-grid a{position:relative;display:block;min-height:170px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.07);box-shadow:0 18px 45px rgba(0,0,0,.28)}.screenshot-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}.screenshot-grid a:hover img{transform:scale(1.08);filter:brightness(.72)}.screenshot-grid span{position:absolute;left:12px;right:12px;bottom:12px;padding:10px 12px;border-radius:14px;background:rgba(7,11,24,.75);backdrop-filter:blur(12px);font-weight:800}.android-panel{display:grid;grid-template-columns:360px 1fr;gap:42px;padding:36px;align-items:center}.phone-mockup{width:260px;height:500px;margin:auto;border:12px solid rgba(255,255,255,.15);border-radius:44px;background:#050816;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15),0 28px 80px rgba(0,0,0,.45);padding:16px}.phone-top{width:82px;height:7px;border-radius:99px;background:rgba(255,255,255,.22);margin:0 auto 18px}.phone-screen{height:430px;border-radius:30px;background:linear-gradient(160deg,rgba(124,60,255,.35),rgba(0,229,255,.16),rgba(255,78,205,.18));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px}.app-icon{width:92px;height:92px;border-radius:26px;display:grid;place-items:center;font-size:2.8rem;background:rgba(255,255,255,.13);margin-bottom:22px}.phone-screen h3{font-size:2rem}.phone-screen p{color:#dbeafe}.app-bars{width:100%;margin-top:34px;display:grid;gap:12px}.app-bars span{height:12px;border-radius:99px;background:rgba(255,255,255,.24)}.app-bars span:nth-child(2){width:78%}.app-bars span:nth-child(3){width:58%}.feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}.feature-list div{padding:14px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:#eaf2ff;font-weight:700}@media(max-width:1100px){.screenshot-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:920px){.featured-project,.android-panel{grid-template-columns:1fr}.featured-project img{height:260px}.screenshot-grid{grid-template-columns:repeat(2,1fr)}.feature-list{grid-template-columns:1fr}}@media(max-width:560px){.screenshot-grid{grid-template-columns:1fr}.screenshot-grid a{min-height:220px}.android-panel{padding:22px}.phone-mockup{width:230px;height:450px}.phone-screen{height:380px}.featured-project img{height:220px}}
+
+/* Restored colorful premium UI + improved mobile alignment */
+html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+img, video { max-width: 100%; height: auto; }
+.hero-copy, .hero-card-wrap, .profile-card, .featured-project, .android-panel, .contact-panel, .code-card, pre { min-width: 0; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.btn { text-align: center; }
+.contact-info p, .hero-text, .section-subtitle, .featured-copy p, .android-content p { overflow-wrap: anywhere; }
+
+/* Keep the old bright colors strongly visible */
+body { background: #070b18; color: #f6f7fb; }
+.bg-orb.orb-one { background: #7c3cff; opacity: .38; }
+.bg-orb.orb-two { background: #00e5ff; opacity: .34; }
+.brand span, .avatar { background: linear-gradient(135deg, #7c3cff, #00e5ff) !important; }
+h1 { background: linear-gradient(90deg,#ffffff,#e9f2ff,#8be9ff) !important; -webkit-background-clip: text !important; background-clip: text !important; color: transparent !important; }
+.btn-primary { background: linear-gradient(135deg, #7c3cff, #ff4ecd) !important; box-shadow: 0 16px 38px rgba(124,60,255,.38) !important; color: #fff !important; }
+.phone-screen { background: linear-gradient(160deg, rgba(124,60,255,.45), rgba(0,229,255,.22), rgba(255,78,205,.24)) !important; }
+.project-visual:before { background: conic-gradient(from 180deg,#7c3cff,#00e5ff,#ff4ecd,#7c3cff) !important; }
+.status-pill span { background: #3cff9e !important; box-shadow: 0 0 18px #3cff9e !important; }
+.section-heading span { color: #00e5ff !important; }
+
+@media (max-width: 768px) {
+  .site-header { top: 10px; padding: 0 4%; }
+  .nav { padding: 12px 14px; border-radius: 20px; }
+  .brand { font-size: 1.15rem; white-space: nowrap; }
+  .brand span { width: 30px; height: 30px; border-radius: 10px; }
+  .nav-links { top: 68px; left: 4%; right: 4%; }
+
+  .section { width: 100%; padding-left: 18px; padding-right: 18px; }
+  .hero { display: flex; flex-direction: column; align-items: center; text-align: center; min-height: auto; padding-top: 120px; gap: 28px; }
+  .hero-copy, .hero-card-wrap, .section-heading, .featured-copy, .android-content { width: 100%; max-width: 100%; text-align: center; }
+  h1 { font-size: clamp(2.15rem, 11vw, 3.25rem); line-height: 1.03; letter-spacing: -1.4px; text-align: center; }
+  .hero-text { margin-left: auto; margin-right: auto; max-width: 34rem; font-size: 1rem; line-height: 1.65; text-align: center; }
+  .status-pill, .mini-title { margin-left: auto; margin-right: auto; justify-content: center; font-size: .85rem; padding: 8px 11px; }
+  .cta-row, .contact-actions, .floating-tags, .project-tags, .skill-cloud { justify-content: center; }
+  .cta-row .btn { width: 100%; max-width: 420px; }
+  .stats-strip { margin-left: auto; margin-right: auto; width: 100%; max-width: 420px; text-align: center; gap: 10px; padding: 14px; }
+  .stats-strip strong { font-size: 1.55rem; }
+
+  .about-grid, .service-grid, .project-grid, .timeline { justify-items: center; }
+  .about-card, .service-card, .project-card, .timeline div { width: 100%; max-width: 520px; text-align: center; }
+  .section-heading { margin-bottom: 30px; }
+  .section-heading h2 { font-size: clamp(1.85rem, 8vw, 2.5rem); letter-spacing: -1px; }
+  .about-card, .service-card, .project-content { padding: 20px; }
+
+  .featured-project, .android-panel, .contact-panel { width: 100%; margin-left: auto; margin-right: auto; justify-items: center; text-align: center; padding: 20px; border-radius: 22px; }
+  .featured-copy h3, .android-content h3 { font-size: 1.45rem; }
+  .featured-project img { height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+  .screenshot-grid { gap: 12px; }
+  .screenshot-grid a { aspect-ratio: 4 / 3; min-height: unset; }
+  .screenshot-grid img { height: 100%; }
+  .screenshot-grid span { font-size: .92rem; padding: 8px 10px; }
+
+  .android-content { display: flex; flex-direction: column; align-items: center; }
+  .android-content p { max-width: 34rem; margin-left: auto; margin-right: auto; }
+  .phone-mockup { width: min(230px, calc(100vw - 80px)); height: 430px; border-width: 10px; padding: 13px; margin-left: auto; margin-right: auto; }
+  .phone-screen { height: 365px; border-radius: 26px; }
+  .phone-screen h3 { font-size: 1.55rem; }
+  .app-icon { width: 76px; height: 76px; font-size: 2.2rem; }
+  .feature-list { width: 100%; max-width: 520px; grid-template-columns: 1fr; }
+  .feature-list div { padding: 12px; font-size: .93rem; text-align: center; }
+  .android-content .btn, #android .btn[href*=".apk"] { margin-left: auto; margin-right: auto; margin-top: 18px; width: min(100%, 250px); align-self: center; }
+
+  .contact-panel { padding: 20px; }
+  .contact-actions { width: 100%; }
+  .contact-actions .btn { width: 100%; max-width: 420px; }
+}
+
+@media (max-width: 480px) {
+  .site-header { padding-left: 14px; padding-right: 14px; }
+  .section { padding: 72px 18px; }
+  .nav { width: 100%; }
+  .hero { padding-top: 110px; }
+  .cta-row { gap: 10px; margin: 24px 0; }
+  .cta-row .btn { padding: 13px 16px; }
+  .stats-strip { grid-template-columns: 1fr; }
+  .floating-tags span, .project-tags span, .skill-cloud span { font-size: .82rem; padding: 8px 10px; }
+  .screenshot-grid { grid-template-columns: 1fr; }
+  .phone-mockup { width: min(215px, calc(100vw - 70px)); height: 405px; }
+  .phone-screen { height: 342px; }
+  .android-panel { padding: 18px 14px; }
+  .feature-list { gap: 10px; }
+  .feature-list div { line-height: 1.35; }
+  .android-content .btn, #android .btn[href*=".apk"] { width: min(100%, 230px); }
+  .contact-info { grid-template-columns: 1fr; gap: 10px; }
+}
+
+/* FINAL PREMIUM RICH UI + RESPONSIVE FIXES FOR LAPTOP AND MOBILE */
+:root{
+  --premium-gradient: linear-gradient(135deg,#7c3cff 0%,#00e5ff 45%,#ff4ecd 100%);
+  --gold:#ffd166;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-4;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(124,60,255,.34), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(0,229,255,.24), transparent 30%),
+    radial-gradient(circle at 65% 82%, rgba(255,78,205,.18), transparent 34%),
+    linear-gradient(135deg,#050816 0%,#080b1c 45%,#02131d 100%);
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.12) 1px,transparent 1px);
+  background-size:34px 34px;
+  opacity:.18;
+}
+.glass-panel,
+.about-card,
+.service-card,
+.timeline div,
+.project-card,
+.featured-project,
+.android-panel,
+.contact-panel{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,.135),rgba(255,255,255,.045)) !important;
+  border:1px solid rgba(255,255,255,.18) !important;
+  box-shadow:0 24px 80px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.12) !important;
+}
+.glass-panel::before,
+.about-card::before,
+.service-card::before,
+.featured-project::before,
+.android-panel::before,
+.contact-panel::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:inherit;
+  pointer-events:none;
+  background:linear-gradient(120deg,rgba(124,60,255,.34),transparent 35%,rgba(0,229,255,.22) 65%,rgba(255,78,205,.22));
+  opacity:.55;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  padding:1px;
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+.nav{
+  background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.06)) !important;
+  box-shadow:0 20px 70px rgba(0,0,0,.42),0 0 0 1px rgba(255,255,255,.12) inset !important;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  color:#fff;
+  text-shadow:0 0 18px rgba(0,229,255,.25);
+}
+.brand span{
+  box-shadow:0 0 26px rgba(0,229,255,.35),0 0 30px rgba(124,60,255,.28);
+}
+.nav-links a:hover,
+.nav-links a:focus{
+  background:linear-gradient(135deg,rgba(124,60,255,.24),rgba(0,229,255,.14));
+  box-shadow:0 8px 22px rgba(0,229,255,.08);
+}
+.status-pill{
+  box-shadow:0 12px 40px rgba(124,60,255,.18), inset 0 1px 0 rgba(255,255,255,.12);
+}
+h1{
+  text-shadow:0 0 34px rgba(0,229,255,.12);
+}
+.btn{
+  min-height:52px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18);
+}
+.btn-primary{
+  position:relative;
+  overflow:hidden;
+}
+.btn-primary::after{
+  content:"";
+  position:absolute;
+  top:0;bottom:0;left:-70%;
+  width:55%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-18deg);
+  transition:.65s;
+}
+.btn-primary:hover::after{left:120%}
+.btn-ghost:hover{
+  background:linear-gradient(135deg,rgba(0,229,255,.13),rgba(124,60,255,.13));
+}
+.stats-strip div,
+.feature-list div,
+.contact-info p{
+  border-radius:18px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.11);
+  padding:16px;
+}
+.stats-strip strong{
+  background:var(--premium-gradient);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.profile-card::after{
+  content:"";
+  position:absolute;
+  width:170px;height:170px;
+  border-radius:50%;
+  right:-60px;bottom:-70px;
+  background:radial-gradient(circle,rgba(0,229,255,.26),transparent 65%);
+}
+.code-card{
+  background:linear-gradient(145deg,rgba(5,8,22,.95),rgba(16,22,48,.92)) !important;
+  box-shadow:inset 0 0 40px rgba(0,229,255,.05);
+}
+.section-heading span{
+  display:inline-block;
+  text-shadow:0 0 22px rgba(0,229,255,.45);
+}
+.section-heading span::after{
+  content:"";
+  display:block;
+  width:70%;
+  height:3px;
+  margin:8px auto 0;
+  border-radius:99px;
+  background:var(--premium-gradient);
+}
+.about-card:hover,
+.service-card:hover,
+.project-card:hover,
+.screenshot-grid a:hover,
+.featured-project:hover,
+.android-panel:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 90px rgba(0,0,0,.45),0 0 40px rgba(0,229,255,.12) !important;
+}
+.about-card,
+.service-card,
+.project-card,
+.screenshot-grid a,
+.featured-project,
+.android-panel{
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.screenshot-grid a{
+  background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
+}
+.screenshot-grid span{
+  text-align:center;
+  border:1px solid rgba(255,255,255,.13);
+}
+.phone-mockup{
+  background:linear-gradient(155deg,#111729,#050816) !important;
+  box-shadow:0 35px 95px rgba(0,0,0,.55),0 0 45px rgba(124,60,255,.16),inset 0 0 0 1px rgba(255,255,255,.16) !important;
+}
+.app-icon{
+  box-shadow:0 20px 55px rgba(124,60,255,.3);
+}
+.android-content .btn{
+  display:inline-flex;
+}
+@media (min-width: 921px){
+  .section{padding-left:32px;padding-right:32px;}
+  .hero{min-height:92vh;}
+  .hero-card-wrap{justify-self:end;max-width:480px;width:100%;}
+  .profile-card{width:100%;}
+  .about-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .service-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+  .screenshot-grid{grid-template-columns:repeat(5,minmax(0,1fr));}
+  .android-panel{grid-template-columns:330px minmax(0,1fr);}
+  .android-content .btn{margin-top:6px;}
+}
+@media (max-width: 920px){
+  .site-header{position:sticky;top:10px;}
+  .hero-card-wrap{display:none;}
+  .nav-links.open{box-shadow:0 20px 60px rgba(0,0,0,.45);}
+  .hero{padding-bottom:36px;}
+  .contact-info p{padding:14px;}
+}
+@media (max-width: 768px){
+  body::after{background-size:28px 28px;opacity:.14;}
+  .cursor-glow{display:none;}
+  .hero-copy{display:flex;flex-direction:column;align-items:center;}
+  .status-pill{max-width:100%;white-space:normal;text-align:center;}
+  .cta-row{width:100%;display:flex;flex-direction:column;align-items:center;}
+  .cta-row .btn{border-radius:18px;}
+  .stats-strip{border-radius:26px;}
+  .section-heading h2{max-width:100%;}
+  .about-card p,.service-card p,.featured-copy p,.android-content p{font-size:1rem;line-height:1.7;}
+  .android-panel{gap:24px;}
+  .android-content .project-tags{justify-content:center;}
+  .android-content .btn{display:flex;justify-content:center;margin-left:auto !important;margin-right:auto !important;}
+}
+@media (max-width: 430px){
+  .site-header{padding-left:12px;padding-right:12px;}
+  .section{padding-left:16px;padding-right:16px;}
+  h1{font-size:2.45rem !important;}
+  .hero-text{font-size:.98rem;}
+  .nav{padding:11px 12px;}
+  .menu-toggle{width:48px;height:48px;display:grid;place-items:center;padding:0;}
+  .about-card,.service-card,.featured-project,.android-panel,.contact-panel{border-radius:24px;}
+  .featured-project,.android-panel{padding:16px;}
+  .phone-mockup{width:205px !important;height:386px !important;}
+  .phone-screen{height:325px !important;}
+  .app-icon{width:66px;height:66px;font-size:2rem;}
+  .android-content h3{font-size:1.35rem;}
+  .android-content .btn{width:220px !important;max-width:100%;}
+}

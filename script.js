@@ -3,17 +3,20 @@ const navLinks = document.getElementById('navLinks');
 const cursorGlow = document.getElementById('cursorGlow');
 const year = document.getElementById('year');
 
-year.textContent = new Date().getFullYear();
+if (year) year.textContent = new Date().getFullYear();
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+}
 
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
 window.addEventListener('mousemove', (event) => {
+  if (!cursorGlow) return;
   cursorGlow.style.left = `${event.clientX}px`;
   cursorGlow.style.top = `${event.clientY}px`;
 });
