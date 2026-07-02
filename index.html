@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harsh Vithani | Premium Portfolio</title>
-  <meta name="description" content="Premium portfolio website of Harsh Vithani - Software Developer, Android Developer and Web Developer." />
+  <title>Harsh Vithani | Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio website of Harsh Vithani - Web Developer, Android Developer, Java Developer and Real Estate Management System creator." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#services">Services</a>
+        <a href="#android">Android App</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -35,15 +35,16 @@
     <section class="hero section" id="home">
       <div class="hero-copy reveal">
         <div class="status-pill"><span></span> Available for freelance projects</div>
-        <h1>Building modern websites & Android apps with clean code.</h1>
-        <p class="hero-text">Hi, I’m <strong>Harsh Vithani</strong>, a Software Developer focused on Java, Android, responsive web development, PHP, MySQL, and real-world digital solutions.</p>
+        <h1>Websites, Android apps & real estate systems.</h1>
+        <p class="hero-text">Hi, I’m <strong>Harsh Vithani</strong>, a Software Developer from Surat. I build responsive websites, PHP/MySQL projects, Java programs, and Android applications with clean UI and practical features.</p>
         <div class="cta-row">
           <a href="#contact" class="btn btn-primary">Hire Me</a>
-          <a href="#projects" class="btn btn-ghost">View Work</a>
+          <a href="#projects" class="btn btn-ghost">View Projects</a>
+          <a href="assets/apps/real-estate-management.apk" class="btn btn-ghost" download>Download APK</a>
         </div>
         <div class="stats-strip glass-panel">
           <div><strong>10+</strong><span>Tech Skills</span></div>
-          <div><strong>2+</strong><span>Major Projects</span></div>
+          <div><strong>3</strong><span>Project Types</span></div>
           <div><strong>100%</strong><span>Client Focus</span></div>
         </div>
       </div>
@@ -61,12 +62,12 @@
             <pre><code>const developer = {
   name: "Harsh Vithani",
   role: "Freelance Developer",
-  stack: ["Java", "Android", "Web"],
-  goal: "Build premium solutions"
+  stack: ["Java", "Android", "PHP", "MySQL"],
+  project: "Real Estate Management"
 };</code></pre>
           </div>
           <div class="floating-tags">
-            <span>Java</span><span>Android</span><span>PHP</span><span>MySQL</span>
+            <span>Java</span><span>Android</span><span>PHP</span><span>MySQL</span><span>Firebase</span>
           </div>
         </div>
       </div>
@@ -84,7 +85,7 @@
         </div>
         <div class="about-card glass-panel reveal delay-1">
           <h3>What I Build</h3>
-          <p>I have worked on real estate management solutions, responsive portfolio websites, Java-based logic, and full-stack web features using PHP and MySQL.</p>
+          <p>I have built real estate management solutions with login, registration, dashboard, property listing, contact, feedback, profile, and admin management pages.</p>
         </div>
         <div class="about-card glass-panel reveal delay-2">
           <h3>Freelance Focus</h3>
@@ -106,33 +107,60 @@
     <section class="section projects" id="projects">
       <div class="section-heading reveal">
         <span>Featured Work</span>
-        <h2>Projects that show my development ability</h2>
+        <h2>Real Estate Management Website</h2>
+        <p class="section-subtitle">A full web portal with user authentication, property browsing, admin dashboard, feedback, contact, about page, and responsive layout.</p>
       </div>
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="project-visual estate-app"><span>App</span></div>
-          <div class="project-content">
-            <h3>Real Estate Management Mobile App</h3>
-            <p>An Android application concept for managing real estate properties, users, listings, and related business operations.</p>
-            <div class="project-tags"><span>Android</span><span>Java</span><span>Firebase</span></div>
+      <article class="featured-project glass-panel reveal">
+        <div class="featured-copy">
+          <h3>Apna Ghar Real Estate Web Portal</h3>
+          <p>This project is designed for property buyers, sellers, agents, builders, and admin users. It includes property search, popular places, recent property cards, user profile, contact form, login/register screens, and an admin dashboard.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>XAMPP</span></div>
+        </div>
+        <img src="assets/screenshots/home-page.png" alt="Apna Ghar home page screenshot" />
+      </article>
+
+      <div class="screenshot-grid reveal delay-1">
+        <a href="assets/screenshots/home-page.png"><img src="assets/screenshots/home-page.png" alt="Home page"><span>Home Page</span></a>
+        <a href="assets/screenshots/recent-property.png"><img src="assets/screenshots/recent-property.png" alt="Recent property"><span>Recent Property</span></a>
+        <a href="assets/screenshots/popular-places.png"><img src="assets/screenshots/popular-places.png" alt="Popular places"><span>Popular Places</span></a>
+        <a href="assets/screenshots/admin-dashboard.png"><img src="assets/screenshots/admin-dashboard.png" alt="Admin dashboard"><span>Admin Dashboard</span></a>
+        <a href="assets/screenshots/login-page.png"><img src="assets/screenshots/login-page.png" alt="Login page"><span>Login Page</span></a>
+        <a href="assets/screenshots/register-page.png"><img src="assets/screenshots/register-page.png" alt="Register page"><span>Register Page</span></a>
+        <a href="assets/screenshots/profile-feedback.png"><img src="assets/screenshots/profile-feedback.png" alt="Profile feedback"><span>Profile & Feedback</span></a>
+        <a href="assets/screenshots/contact-page.png"><img src="assets/screenshots/contact-page.png" alt="Contact page"><span>Contact Page</span></a>
+        <a href="assets/screenshots/about-page.png"><img src="assets/screenshots/about-page.png" alt="About page"><span>About Page</span></a>
+        <a href="assets/screenshots/footer.png"><img src="assets/screenshots/footer.png" alt="Footer"><span>Footer</span></a>
+      </div>
+    </section>
+
+    <section class="section android" id="android">
+      <div class="section-heading reveal">
+        <span>Android Application</span>
+        <h2>Real Estate Management APK</h2>
+        <p class="section-subtitle">Download and test the Android application version of the real estate management project.</p>
+      </div>
+      <div class="android-panel glass-panel reveal">
+        <div class="phone-mockup">
+          <div class="phone-top"></div>
+          <div class="phone-screen">
+            <div class="app-icon">🏠</div>
+            <h3>Apna Ghar</h3>
+            <p>Real Estate App</p>
+            <div class="app-bars"><span></span><span></span><span></span></div>
           </div>
-        </article>
-        <article class="project-card reveal delay-1">
-          <div class="project-visual web-portal"><span>Web</span></div>
-          <div class="project-content">
-            <h3>Real Estate Web Portal</h3>
-            <p>A responsive web portal for property listing, management, and user-friendly real estate browsing experience.</p>
-            <div class="project-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span></div>
+        </div>
+        <div class="android-content">
+          <h3>Real Estate Management Mobile Application</h3>
+          <p>This Android app is added to your portfolio as a downloadable project file. Visitors can download the APK and test your real estate management application.</p>
+          <div class="feature-list">
+            <div>✅ Property management app concept</div>
+            <div>✅ Mobile application project showcase</div>
+            <div>✅ APK download button included</div>
+            <div>✅ Suitable for Fiverr and job portfolio</div>
           </div>
-        </article>
-        <article class="project-card reveal delay-2">
-          <div class="project-visual portfolio-ui"><span>UI</span></div>
-          <div class="project-content">
-            <h3>Premium Portfolio Website</h3>
-            <p>A rich, modern personal website designed to present skills, services, and projects for freelance clients.</p>
-            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          </div>
-        </article>
+          <div class="project-tags"><span>Android</span><span>Java</span><span>Firebase</span><span>Mobile App</span></div>
+          <a class="btn btn-primary" href="assets/apps/real-estate-management.apk" download>Download APK</a>
+        </div>
       </div>
     </section>
 
@@ -146,18 +174,6 @@
         <div class="service-card glass-panel reveal delay-1"><span>02</span><h3>Android App Development</h3><p>Simple and useful Android applications with clean screens and practical features.</p></div>
         <div class="service-card glass-panel reveal delay-2"><span>03</span><h3>Java Programming</h3><p>Java tasks, logic building, mini projects, and code improvement support.</p></div>
         <div class="service-card glass-panel reveal delay-3"><span>04</span><h3>Bug Fixing</h3><p>Fixing errors in HTML, CSS, JavaScript, PHP, Java, and database-connected pages.</p></div>
-      </div>
-    </section>
-
-    <section class="section timeline-section">
-      <div class="section-heading reveal">
-        <span>Process</span>
-        <h2>How I work with freelance clients</h2>
-      </div>
-      <div class="timeline reveal">
-        <div><strong>01</strong><h3>Understand Requirement</h3><p>I collect project details, goal, features, and design preference.</p></div>
-        <div><strong>02</strong><h3>Design & Development</h3><p>I create clean UI and build the functionality step by step.</p></div>
-        <div><strong>03</strong><h3>Test & Deliver</h3><p>I test responsiveness, fix issues, and deliver final project files.</p></div>
       </div>
     </section>
 
